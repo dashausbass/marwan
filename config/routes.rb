@@ -9,7 +9,7 @@ Marwan::Application.routes.draw do
   get "light-fitting" => "pages#light_fitting", :as => 'light_fitting'
   get "lighting-protection" => "pages#lighting_protection", :as => 'lighting_protection'
   get "company-profile" => "pages#company_profile", :as => 'company_profile'
-
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
