@@ -3,7 +3,12 @@
 
 	<h2>J Propster GmBH</h2>
 
-	<p align="center"><%= image_tag "propster.jpg" %></p>
+	<% if Rails.env.production? %>
+		<p align="center"><%= image_tag "https://s3.amazonaws.com/JustABucket/marwan/assets/images/propster.jpg" %></p>
+	<% else %>
+		<p align="center"><%= image_tag "propster.jpg" %></p>
+	
+	<% end %>
 
 	<p class="lead"><strong>“With safety always one idea ahead!”</strong>. His slogan has been the motive for J. Pröpster and his team for the last 25 years of developing and manufacturing lightning protection components. The revolutionary ideas of J. Pröpster including numerous inventions and patents have been a major influence on the lightning protection industry. 
 

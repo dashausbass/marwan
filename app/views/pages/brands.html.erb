@@ -1,26 +1,56 @@
-<body id="body-font-color">
-	</br><h1><small><center>Our Brands</h1></br>
+<% if Rails.env.production? %>
+	<body id="body-font-color">
+		</br><h1><small><center>Our Brands</h1></br>
 
-	<table class="table table-bordered">
-		<tbody>
-			<tr>
-				<td align="center" style="vertical-align: middle"><%= link_to image_tag("marshall-logo.jpg"), "http://www.band-it-idex.com" %></td>
-				<td align="center" style="vertical-align: middle;"><%= link_to image_tag("j-propster.gif"), "http://www.band-it-idex.com" %></td>
-				<td align="center" style="vertical-align: middle;"><%= link_to image_tag("intech_logo.gif"), "http://www.band-it-idex.com" %></td>
-				<td align="center" style="vertical-align: middle;"><%= link_to image_tag("good-lite.gif"), "http://www.band-it-idex.com" %></td>
-			</tr>
-			<tr>
-				<td align="center" style="vertical-align: middle;"><%= link_to image_tag("burn.gif"), "http://www.band-it-idex.com" %></td>
-				<td align="center" style="vertical-align: middle;"><%= link_to image_tag("bandit.gif"), "http://www.band-it-idex.com" %></td>
-				<td align="center" style="vertical-align: middle;"><%= link_to image_tag("lightining.gif"), "http://www.band-it-idex.com" %></td>
-				<td align="center" style="vertical-align: middle;"><%= link_to image_tag("renora.gif"), "http://www.band-it-idex.com" %></td>
-			</tr>
-			<tr>
-				<td align="center" style="vertical-align: middle;"><%= link_to image_tag("negurosu.gif"), "http://www.band-it-idex.com" %></td>
-				<td align="center" style="vertical-align: middle;"><%= link_to image_tag("conway_logo.gif"), "http://www.band-it-idex.com" %></td>
-				<td align="center" style="vertical-align: middle;"><%= link_to image_tag("supportcomms_logo.gif"), "http://www.band-it-idex.com" %></td>
-				<td align="center" style="vertical-align: middle;"><%= link_to image_tag("united-logo.gif"), "http://www.band-it-idex.com" %></td>
-			</tr>
-		</tbody>
-	</table>
-</body>
+		<table class="table table-bordered">
+			<tbody>
+				<tr>
+					<td align="center" style="vertical-align: middle"><%= link_to image_tag("https://s3.amazonaws.com/JustABucket/marwan/assets/images/marshall-logo.jpg"), "http://www.marshall-tufflex.com/", :target => "_blank" %></td>
+					<td align="center" style="vertical-align: middle;"><%= link_to image_tag("https://s3.amazonaws.com/JustABucket/marwan/assets/images/j-propster.gif"), "http://www.proepster.de", :target => "_blank" %></td>
+					<td align="center" style="vertical-align: middle;"><%= link_to image_tag("https://s3.amazonaws.com/JustABucket/marwan/assets/images/intech_logo.gif"), "http://www.intralinktechno.com", :target => "_blank" %></td>
+					<td align="center" style="vertical-align: middle;"><%= link_to image_tag("https://s3.amazonaws.com/JustABucket/marwan/assets/images/good-lite.gif"), "http://www.uli.com.my", :target => "_blank" %></td>
+				</tr>
+				<tr>
+					<td align="center" style="vertical-align: middle;"><%= link_to image_tag("https://s3.amazonaws.com/JustABucket/marwan/assets/images/burn.gif"), "http://www.royalsteel.co.th", :target => "_blank" %></td>
+					<td align="center" style="vertical-align: middle;"><%= link_to image_tag("https://s3.amazonaws.com/JustABucket/marwan/assets/images/bandit.gif"), "http://www.band-it-idex.com", :target => "_blank" %></td>
+					<td align="center" style="vertical-align: middle;"><%= link_to image_tag("https://s3.amazonaws.com/JustABucket/marwan/assets/images/lightining.gif"), "http://www.l-and-e.com", :target => "_blank" %></td>
+					<td align="center" style="vertical-align: middle;"><%= link_to image_tag("https://s3.amazonaws.com/JustABucket/marwan/assets/images/renora.gif"), "http://www.remora.net", :target => "_blank" %></td>
+				</tr>
+				<tr>
+					<td align="center" style="vertical-align: middle;"><%= link_to image_tag("https://s3.amazonaws.com/JustABucket/marwan/assets/images/negurosu.gif"), "http://www.negurosu.co.uk", :target => "_blank" %></td>
+					<td align="center" style="vertical-align: middle;"><%= link_to image_tag("https://s3.amazonaws.com/JustABucket/marwan/assets/images/conway_logo.gif"), "http://www.conway.com.my", :target => "_blank" %></td>
+					<td align="center" style="vertical-align: middle;"><%= link_to image_tag("https://s3.amazonaws.com/JustABucket/marwan/assets/images/supportcomms_logo.gif"), "http://www.supportcomms.co.uk", :target => "_blank" %></td>
+					<td align="center" style="vertical-align: middle;"><%= link_to image_tag("https://s3.amazonaws.com/JustABucket/marwan/assets/images/united-logo.gif"), "http://www.uli.com.my", :target => "_blank" %></td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+
+<% else %>
+	<body id="body-font-color">
+		</br><h1><small><center>Our Brands</h1></br>
+
+		<table class="table table-bordered">
+			<tbody>
+				<tr>
+					<td align="center" style="vertical-align: middle"><%= link_to image_tag("marshall-logo.jpg"), "http://www.marshall-tufflex.com/", :target => "_blank" %></td>
+					<td align="center" style="vertical-align: middle;"><%= link_to image_tag("j-propster.gif"), "http://www.proepster.de", :target => "_blank" %></td>
+					<td align="center" style="vertical-align: middle;"><%= link_to image_tag("intech_logo.gif"), "http://www.intralinktechno.com", :target => "_blank" %></td>
+					<td align="center" style="vertical-align: middle;"><%= link_to image_tag("good-lite.gif"), "http://www.uli.com.my", :target => "_blank" %></td>
+				</tr>
+				<tr>
+					<td align="center" style="vertical-align: middle;"><%= link_to image_tag("burn.gif"), "http://www.royalsteel.co.th", :target => "_blank" %></td>
+					<td align="center" style="vertical-align: middle;"><%= link_to image_tag("bandit.gif"), "http://www.band-it-idex.com", :target => "_blank" %></td>
+					<td align="center" style="vertical-align: middle;"><%= link_to image_tag("lightining.gif"), "http://www.l-and-e.com", :target => "_blank" %></td>
+					<td align="center" style="vertical-align: middle;"><%= link_to image_tag("renora.gif"), "http://www.remora.net", :target => "_blank" %></td>
+				</tr>
+				<tr>
+					<td align="center" style="vertical-align: middle;"><%= link_to image_tag("negurosu.gif"), "http://www.negurosu.co.uk", :target => "_blank" %></td>
+					<td align="center" style="vertical-align: middle;"><%= link_to image_tag("conway_logo.gif"), "http://www.conway.com.my", :target => "_blank" %></td>
+					<td align="center" style="vertical-align: middle;"><%= link_to image_tag("supportcomms_logo.gif"), "http://www.supportcomms.co.uk", :target => "_blank" %></td>
+					<td align="center" style="vertical-align: middle;"><%= link_to image_tag("united-logo.gif"), "http://www.uli.com.my", :target => "_blank" %></td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+<% end %>
