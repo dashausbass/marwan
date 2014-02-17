@@ -9,23 +9,43 @@
     </ol>
 
     <!-- Wrapper for slides -->
-    <div class="carousel-inner">
-      <div class="item active">
-        <%= image_tag "slide1.png" %>
-        <div class="carousel-caption">
+    <% if Rails.env.production? %>
+      <div class="carousel-inner">
+        <div class="item active">
+          <%= image_tag "https://s3.amazonaws.com/JustABucket/marwan/assets/images/Slide1.png" %>
+          <div class="carousel-caption">
+          </div>
+        </div>
+        <div class="item">
+          <%= image_tag "https://s3.amazonaws.com/JustABucket/marwan/assets/images/Slide2.png" %>
+          <div class="carousel-caption">
+          </div>
+        </div>
+        <div class="item">
+          <%= image_tag "https://s3.amazonaws.com/JustABucket/marwan/assets/images/Slide3.png" %>
+          <div class="carousel-caption">
+          </div>
         </div>
       </div>
-      <div class="item">
-        <%= image_tag "slide2.png" %>
-        <div class="carousel-caption">
+    <% else %>
+      <div class="carousel-inner">
+        <div class="item active">
+          <%= image_tag "slide1.png" %>
+          <div class="carousel-caption">
+          </div>
+        </div>
+        <div class="item">
+          <%= image_tag "slide2.png" %>
+          <div class="carousel-caption">
+          </div>
+        </div>
+        <div class="item">
+          <%= image_tag "slide3.png" %>
+          <div class="carousel-caption">
+          </div>
         </div>
       </div>
-      <div class="item">
-        <%= image_tag "slide3.png" %>
-        <div class="carousel-caption">
-        </div>
-      </div>
-    </div>
+    <% end %>
 
     <!-- Controls -->
     <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
