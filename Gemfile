@@ -11,7 +11,7 @@ gem 'jbuilder', '~> 1.2'
 gem "bootstrap-sass", "~> 3.1.0.2"
 gem "paperclip", "~> 3.0"
 gem "aws-sdk", '~> 1.20.0'
-gem "asset_sync", "~> 1.0.0"
+
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
