@@ -1,6 +1,9 @@
 <div id="banner">
- <%= image_tag "https://s3.amazonaws.com/JustABucket/marwan/assets/images/marwan_header.jpg" %>
- <%= image_tag "https://s3.amazonaws.com/JustABucket/marwan/assets/images/marwan_header.jpg" %>
+ <% if Rails.env.production? %>
+  <%= image_tag "https://s3.amazonaws.com/JustABucket/marwan/assets/images/marwan_header.JPG" %>
+  <% else %>
+  <%= image_tag "https://s3.amazonaws.com/JustABucket/marwan/assets/images/marwan_header.JPG" %>
+  <% end %>
 </div>
 
 <nav class="navbar navbar-default" role="navigation" style="margin-top:0px;">
